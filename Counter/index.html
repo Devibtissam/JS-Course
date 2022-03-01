@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>counter</title>
+    <style>
+      #main-content {
+        background-color: #ffcfd2;
+        width: 50%;
+        text-align: center;
+        padding: 2rem;
+        border-radius: 5px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      h1 {
+        text-transform: capitalize;
+        margin-bottom: 2.5rem;
+        color: #6d6875;
+        font-style: italic;
+      }
+      button {
+        padding: 0.75rem;
+        text-transform: capitalize;
+        margin-right: 0.25rem;
+        border-radius: 10%;
+        border: 2px solid #8eecf5;
+      }
+      p {
+        font-size: 3rem;
+        color: #457b9d;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main-content">
+      <h1>counter</h1>
+      <div class="btn-container">
+        <button class=" btn decrease">decrease</button>
+        <button class=" btn reset">reset</button>
+        <button class=" btn increase">increase</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

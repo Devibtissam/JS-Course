@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review</title>
+    <style>
+       h1,h2{
+           margin: 0;
+           padding: 0;
+       }
+      img {
+          width: 100%;
+          height: 250px;
+          border-radius: 100%;
+         
+      }
+      .img-review{
+       
+          width: 250px;
+         
+          margin: 0 auto;
+          padding: 1rem;
+
+      }
+      h1{
+          color: rgb(78, 168, 204);
+          text-align: center;
+          text-transform: capitalize;
+          padding: 2rem;
+      }
+      button{
+          display: block;
+          margin: 1rem auto;
+          padding: 0.75rem;
+          text-transform: capitalize;
+          background-color: unset;
+          border: 2px solid rgb(78, 168, 204);
+        
+          font-weight: bold;
+          
+      }
+      a{
+          display: inline-block;
+          text-decoration: none;
+          color: royalblue;
+      }
+     
+      .review-name{
+          color: royalblue;
+          text-transform: capitalize;
+          padding: 1rem;
+      }
+      .review-job{
+          text-transform: uppercase;
+          color: rgb(78, 168, 204);
+      }
+     
+      .review-items{
+          text-align: center;
+          background-color: rgb(78, 168, 204, 0.5);
+          padding: 1rem;
+      }
+      .review-desc{
+          padding: 1rem;
+      }
+
+    @media screen and (min-width: 767px){
+         #section-content{
+            display: flex; 
+           flex-direction: row;
+           justify-content: center;
+            margin: 2rem;
+          
+        }
+        .review-items{
+            flex-basis: 50%;
+        }
+    }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>our reviews</h1>
+      <section id="section-content">
+        <div class="review-items">
+          <div class="img-review">
+            <img
+              src="https://res.cloudinary.com/diqqf3eq2/image/upload/v1586883409/person-2_np9x5l.jpg"
+              alt="image of the person's review"
+              class="img"
+            />
+          </div>
+          <h2 class="review-name">anna johnson</h2>
+          <span class="review-job">web developer</span>
+          <p class="review-desc">
+            Helvetica artisan kinfolk thundercats lumbersexual blue bottle.
+            Disrupt glossier gastropub deep v vice franzen hell of brooklyn twee
+            enamel pin fashion axe.photo booth jean shorts artisan narwhal.
+          </p>
+          <div class="btn-container">
+                    <svg class="prev-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9V8l-4 4 4 4v-3h4v-2h-4z" fill="rgba(50,152,219,1)"/></svg>
+          
+                   <svg class="next-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 2c5.52 0 10 4.48 10 10s-4.48 10-10 10S2 17.52 2 12 6.48 2 12 2zm0 9H8v2h4v3l4-4-4-4v3z" fill="rgba(50,152,219,1)"/></svg>
+            
+
+              <button class="surprise-btn">surprise me !</button>
+           
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
