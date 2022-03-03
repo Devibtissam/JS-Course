@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .sidebar-items{
+            height: 100vh;
+            background-color: blueviolet;
+            padding: 2em;
+            transform: translateX(-100%);
+            transition: transform .5s ease-in-out;
+        }
+        .logo-items{
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: space-between;
+        }
+        .logo-items p{
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        svg{
+            cursor: pointer;
+            
+        }
+        .nav-items{
+            list-style: none;
+            padding: 1em 0;
+        }
+        .nav-item{
+            padding: 1.5em 0;
+            cursor: pointer;
+            color: white;
+            transition: all .5s ease-in-out;
+        }
+        .nav-item:hover{
+            transform: translateX(5px);
+        }
+        .toggle{
+            position: fixed;
+            right: 0;
+            margin: 1em;
+        }
+        
+        .show-sidebar{
+            transform: translateX(0);
+        }
+
+        @media (min-width: 680px){
+            .sidebar-items{
+                width: 50vw;    
+            }
+            
+         }
+        
+            
+           
+
+        }
+    </style>
+</head>
+<body>
+     <svg class="toggle" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z" fill="rgba(155,89,182,1)"/></svg>
+    <nav class="sidebar-items">
+       
+        <div class="logo-items">
+            <p>Codding Addict</p>
+            <svg class="close-btn" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z" fill="rgba(255,255,255,1)"/></svg>
+        </div>
+        <ul class="nav-items">
+            <li class="nav-item">Home</li>
+            <li class="nav-item">About</li>
+            <li class="nav-item">Projects</li>
+            <li class="nav-item">Contact</li>
+        </ul>
+
+    </nav>
+    <script src="./script.js"></script>
+</body>
+</html>

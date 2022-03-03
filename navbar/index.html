@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      header {
+        height: 10vh;
+        background-color: brown;
+    
+      }
+      .nav-logo p {
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: white;
+      }
+      .nav-items {
+        max-width: 960px;
+        width: 75%;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding: 1em;
+      }
+      .menu-items {
+        list-style: none;
+      }
+      .menu-items li {
+        display: inline-block;
+        margin-right: 1em;
+        font-size: 1.25rem;
+        color: white;
+      }
+      svg{
+        display: none;
+      }
+
+      .menu-dropdown-items
+       {
+        display: none;
+      }
+      /* .menu-dropdown-items{
+          display: none;
+      } */
+
+      @media (max-width: 767px) {
+      .menu-items{
+          display: none;
+      }
+    
+        svg {
+          display: block;
+          cursor: pointer;
+      
+        }
+       
+        .menu-dropdown-items {
+          position: absolute;
+          top: 10%;
+          left: 0%;
+          background-color: brown;
+          width: 100%;
+          list-style: none;
+          padding: 1em;
+          
+        }
+        .menu-item-drp {
+          color: white;
+          padding: 1em;
+          transition: transform 0.5s ease-in-out;
+        }
+
+        .menu-item-drp:hover {
+          transform: translateX(3%);
+        }
+        .drp-display{
+            display: block;
+        }
+
+
+
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="nav-items">
+         
+        <div class="nav-logo">
+          <p>Codding Addict</p>
+        </div>
+        <ul class="menu-items rm-display">
+          <li class="menu-item">Home</li>
+          <li class="menu-item">About</li>
+          <li class="menu-item">Projects</li>
+          <li class="menu-item">contact</li>
+        </ul>
+         <svg
+          class="menu-btn"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          width="24"
+          height="24"
+        >
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path
+            d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"
+            fill="rgba(255,255,255,1)"
+          />
+         
+        </svg>
+         <ul class="menu-dropdown-items drp-display">
+            <li class="menu-item-drp">Home</li>
+            <li class="menu-item-drp">About</li>
+            <li class="menu-item-drp">Projects</li>
+            <li class="menu-item-drp">contact</li>
+          </ul>
+      </nav>
+       
+    </header>
+    <script src="./script.js"></script>
+  </body>
+</html>
