@@ -1,0 +1,24 @@
+body{
+  font-size: 1rem;
+  padding:0;
+  margin:0;
+  box-sizing:border-box;
+}
+h1{
+  color: gray;
+  text-align: center;
+}
+.converter-contents{
+  background-color: pink;
+  padding:2em;
+  width:250px;
+  margin: 4em auto;
+  text-align:center;
+  border-radius:5px;
+
+}
+.result{
+  padding:1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
