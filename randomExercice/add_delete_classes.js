@@ -1,7 +1,7 @@
 const inputs = document.querySelectorAll('input');
 const parentClassAdded = document.querySelector('.classes-list div');
-const classText = [];
-const removedClasses = [];
+let classText = [];
+let textClasses = [];
 
 function sortClasses(classvalue) {
   const classArr = classvalue.split(' ').sort();
@@ -13,6 +13,10 @@ function sortClasses(classvalue) {
   return classText.sort();
 }
 
+function removeClasses(classesNames, className) {
+  return classesNames.filter((elt) => className.getAttribute('class') !== elt);
+}
+
 inputs.forEach((input) => {
   input.addEventListener('blur', (e) => {
     const input = e.currentTarget;
@@ -21,7 +25,7 @@ inputs.forEach((input) => {
 
     // check which  input user typed
     if (inputType === 'classes-to-add') {
-      const textClasses = sortClasses(inputTypeValue);
+      textClasses = sortClasses(inputTypeValue);
 
       // to remove elt and start sorting it from over
       while (parentClassAdded.firstChild) {
@@ -39,6 +43,9 @@ inputs.forEach((input) => {
       for (const childElt of childrenElt) {
         if (childElt.classList.contains(inputTypeValue)) {
           childElt.remove();
+          classText = removeClasses(classText, childElt);
+          console.log(classText);
+          // console.log(childElt.getAttribute('class'));
         }
       }
     }
